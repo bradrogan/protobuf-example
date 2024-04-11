@@ -1,5 +1,5 @@
-module github.com/kfelter/protobuf-example
+module github.com/bradrogan/protobuf-example
 
-go 1.16
+go 1.20
 
 require google.golang.org/protobuf v1.26.0

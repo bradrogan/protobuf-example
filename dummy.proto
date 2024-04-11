@@ -2,7 +2,7 @@ syntax = "proto3";
 package dummy;
 option go_package  = "/dummy";
 
-message Thing {
+message Data {
   string thing_one = 1;
   string thing_two = 2;
 }
