@@ -30,12 +30,15 @@ func main() {
 		fmt.Println("Error!", err.Error())
 	}
 	v := *fetchedThing
-	fmt.Println("Fetched a thing:\n", v.ToString())
+
+	line := "\n---------------\n"
+
+	fmt.Print("Fetched a thing:", line, v.ToString(), line)
 
 	// now we do a typical service operation and create a new thing, which involves fetching from the fake proto client
 	// hop to the service code to see how it doesn't care about ThingTwo, and adding ThingThree wouldn't be a breaking change
 	createdThing := thingsvc.CreateThing()
 
-	fmt.Println("\n\nCreated a thing:\n", createdThing.ToString())
+	fmt.Print("\n\nCreated a thing:", line, createdThing.ToString(), line)
 
 }
